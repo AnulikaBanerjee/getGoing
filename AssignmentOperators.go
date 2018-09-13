@@ -9,7 +9,7 @@ func main(){
 	var d int	//have to declare dataType else errors out
 	d=5
 	var c = 4	// automatic dataType assigned as int
-	b := 1		// := is used for short variable declarations+assignment. This is same as var b = 1
+	b := 1		// := is used for short variable declarations+assignment. This is same as var b int = 1
 	Println(a+b+c+d+VALUE)
 
 }
