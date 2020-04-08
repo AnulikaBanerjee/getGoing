@@ -4,7 +4,7 @@ I'm creating programs on Golang as I learn.
 Each file has comments to guide on rules and common errors.
 
 
-# Go Notes on commonly missed out basics
+# Go Notes and Basics
 
 - Package named main with a main function is the only executable package in Go. Others are helper package.
 ```
@@ -40,5 +40,17 @@ $go run main.go helper.go // it’s valid to run main with other dependent file
 
 - This kind of behavior is what separates types in Go as value types and reference types. Value types are int, float, bool, string, struct. Reference types are slice, map, channel, pointer and func.
 
+### Commonly used Formatting verbs
 
 
+| type/verb | verb/type |
+| ------ | ------ |
+|bool	|	%t|
+|int	|	%d|
+|string	|	%s|
+|float	|	%g|
+|chan	|	%p|
+|pointer	|	%p|
+|%v	|	value in default format|
+|%+v	|	the + adds field names for structs|
+|%T	|	Go syntax representation of type of the value|
