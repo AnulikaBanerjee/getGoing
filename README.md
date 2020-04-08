@@ -30,7 +30,15 @@ $go run main.go helper.go // it’s valid to run main with other dependent file
     c)  person1.name=”Amy”
         person1.age=21
 
-- Go is pass by value language
+- If a function works on a pointer to a type, we can pass the type directly (not the pointer to it) and go will take the pointer to it by itself. 
+
+- When we create a slice, internally go creates an array with the values and a data structure to store details of the struct which are: pointer to head, capacity and length. Capacity is always 2^n size as it grows or shrinks. Length is actual count of values held.
+
+- Go is a “pass by value” language. Which means unless pointers come into play, everything in go is passed by value i.e. only a copy is passed.
+
+- If we modify a struct via a function by passing the struct (not pointer), it won’t work as it’ll be a pass by value and update works on the copy of struct. On the contrary, modification on a slice via a function would work although it’s still a pass by value, but what is being passed is not the array, but the data structure of the slice.
+
+- This kind of behavior is what separates types in Go as value types and reference types. Value types are int, float, bool, string, struct. Reference types are slice, map, channel, pointer and func.
 
 
 
